@@ -21,27 +21,38 @@ function addBookToLibrary(title, author, pages, hasRead) {
     myLibrary.push(newBook);
 }
 
-function openModal(){
-    modal.style.display = "block";
-}
 
-function closeModal(){
-    modal.style.display = "none";
-}
+let Modal = {
 
-function clickOutside(e){
-    if(e.target == modal){
-        modal.style.display = "none";
+    container:document.getElementById("bookEntryModal"),
+    button:document.getElementById("modalBtn"),
+    closeBtn:document.getElementsByClassName("closeBtn")[0],
+
+    addEvent: function() {
+        Modal.button.addEventListener("click", Modal.open);
+        Modal.closeBtn.addEventListener("click", Modal.close);
+        window.addEventListener("click", Modal.clickOutside);
+        console.log("added events")
+    },
+
+    open: () => {
+        console.log("test")
+       Modal.container.style.display = "block";
+        
+        
+    },
+    
+    close: () => {
+        Modal.container.style.display = "none";
+    },
+
+    clickOutside: (e) =>{
+        if(e.target == Modal.container){
+            Modal.container.style.display = "none";
+        }
     }
+
+    
+
 }
-
-const modal = document.getElementById("bookEntryModal");
-const modalBtn = document.getElementById("modalBtn");
-const closeBtn = document.getElementsByClassName("closeBtn")[0];
-
-modalBtn.addEventListener("click", openModal);
-
-closeBtn.addEventListener("click", closeModal);
-
-window.addEventListener("click", clickOutside)
-
+Modal.addEvent()

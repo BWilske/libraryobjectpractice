@@ -1,9 +1,11 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.5;
     padding: none;
     border: none;
+    background-color: #f3f2ec;
+    
 }
 
 h2 {
@@ -49,7 +51,7 @@ input[type="checkbox"] {
 }
 
 .modal {
-    /* display:none; */
+    display:none;
     position:fixed;
     z-index: 1;
     left: 0;
@@ -62,7 +64,7 @@ input[type="checkbox"] {
 
 .modal-footer {
     display: flex;
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 .modal-content {
@@ -74,7 +76,7 @@ input[type="checkbox"] {
     width: 500px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
-    animation-duration: .5s;
+    animation-duration: .4s;
     border: 5px solid rgb(82, 79, 88);
     border-radius: 16px;
 }
