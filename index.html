@@ -9,38 +9,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="library-container" class="container">
-        <div id="Header" class="header">
-            <div>
-                <button id="modalBtn" class="button">Add Book</button>
-            </div>
-            <div><p>About Us</p></div>
-            <div><p>Donate</p></div>
-            <div><p>Login</p></div>
+    <div id="Header" class="header">
+        <div>
+            <button id="modalBtn" class="button">Add Book</button>
         </div>
+        <div><p>About Us</p></div>
+        <div><p>Donate</p></div>
+        <div><p>Login</p></div>
+    </div>
 
-        
-        <!-- begin modal -->
-        <div class="modal" id="bookEntryModal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="closeBtn">&times;</span>
-                    <h2>Please enter info</h2>
-                </div>
-                <div class="modal-body">
-                    <p>Title</p>
-                    <input type="text" class="bookinfo">
-                    <p>Author</p>
-                    <input type="text" class="bookinfo">
-                    <p>Year</p>
-                    <input type="text" class="bookinfo">
-                </div>
-                <div class="modal-footer">
-                    <button class="button" id="enterBtn">Enter</button>
-                    <div class="checkboxholder"><input type="checkbox" id="hasReadCheckbox"></div>
-                    <p>Already Read?</p>
-                
-                </div>
+
+    <!-- begin book display -->
+    <div id="library-container" class="container">
+    </div>
+
+
+    <!-- begin modal -->
+    <div class="modal" id="bookEntryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <h2>Please enter info</h2>
+            </div>
+            <div class="modal-body">
+                <p>Title</p>
+                <input type="text" class="bookinfo">
+                <p>Author</p>
+                <input type="text" class="bookinfo">
+                <p>Year</p>
+                <input type="text" class="bookinfo">
+            </div>
+            <div class="modal-footer">
+                <button class="button" id="enterBtn">Enter</button>
+                <div class="checkboxholder"><input type="checkbox" id="hasReadCheckbox"></div>
+                <p>Already Read?</p>
+            
             </div>
         </div>
     </div>

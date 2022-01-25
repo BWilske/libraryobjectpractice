@@ -14,6 +14,8 @@ Book.prototype.returnInfo= function () {
 myLibrary[0] = new Book("The Hobbit","JRR Tolkein", 815, true)
 myLibrary[1] = new Book("The Hobbit","JRR Tolkein", 815, true)
 myLibrary[2] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[3] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[4] = new Book("The Hobbit","JRR Tolkein", 815, true)
 
 //takes in info from form to create new book
 function addBookToLibrary(title, author, pages, hasRead) {

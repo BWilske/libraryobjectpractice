@@ -114,6 +114,7 @@ input[type="checkbox"] {
     background-color: rgb(3, 32, 94);
     /* position: fixed; */
     border-radius: 0 0 4px 4px;
+    margin-bottom: 10px;
     
     
 }
@@ -136,8 +137,11 @@ input[type="checkbox"] {
 
 .container {
     /* background-color: red; */
+    display: flex;
+    justify-content: center;
 }
 
 .container>* {
-    background-color: red;
+    background-color: red; 
+    width: 300px;
 }
