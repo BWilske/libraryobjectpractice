@@ -11,11 +11,16 @@ Book.prototype.returnInfo= function () {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.hasRead}`
 }
 
-myLibrary[0] = new Book("The Hobbit","JRR Tolkein", 815, true)
-myLibrary[1] = new Book("The Hobbit","JRR Tolkein", 815, true)
-myLibrary[2] = new Book("The Hobbit","JRR Tolkein", 815, true)
-myLibrary[3] = new Book("The Hobbit","JRR Tolkein", 815, true)
-myLibrary[4] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[0] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[1] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[2] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[3] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[4] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[5] = new Book("The Hobbit","JRR Tolkein", 815, false)
+myLibrary[6] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[7] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[8] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[9] = new Book("The Hobbit","JRR Tolkein", 815, true)
 
 //takes in info from form to create new book
 function addBookToLibrary(title, author, pages, hasRead) {
@@ -29,16 +34,25 @@ function displayBooks(library) {
         
         let newBook = document.createElement("div")
         newBook.setAttribute("class", "book")
+
+        let hasReadasText = boolTotext(library[i].hasRead)
+
         newBook.innerHTML = `
-        <p>${myLibrary[i].title}</p>
-        <p>${myLibrary[i].author}</p>
-        <p>${myLibrary[i].pages}</p>
-        <p>${myLibrary[i].hasRead}</p>`
+        <p>Title: ${library[i].title}</p>
+        <p>Author: ${library[i].author}</p>
+        <p>Pages: ${library[i].pages}</p>
+        <p>${hasReadasText}</p>`
         libraryEl.append(newBook)
         
 
         
     }
+}
+//converts a bool in array to the text for display on page
+function boolTotext(hasRead) {
+    console.log(hasRead)
+    if (hasRead===true)  return "Read";
+    else return "Not Read"
 }
 
 // modal

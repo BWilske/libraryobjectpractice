@@ -131,6 +131,7 @@ input[type="checkbox"] {
     margin-right: auto;
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 /* library */
@@ -142,6 +143,8 @@ input[type="checkbox"] {
 }
 
 .container>* {
-    background-color: red; 
-    width: 300px;
+    width: 200px;
+    border: 1px dashed;
+    text-align: center;
+    margin: 8px
 }
