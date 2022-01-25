@@ -1,14 +1,13 @@
 let myLibrary = []
 
-let theHobbit = new Book("The Hobbit","JRR Tolkein", 815, true)
-
+//book generator
 function Book(title, author, pages, hasRead ) {
     this.title = title
     this.author = author
     this.pages = pages
     this.hasRead = hasRead
 }
-Book.prototype.logInfo= function () {
+Book.prototype.returnInfo= function () {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.hasRead}`
 }
 
@@ -16,20 +15,31 @@ myLibrary[0] = new Book("The Hobbit","JRR Tolkein", 815, true)
 myLibrary[1] = new Book("The Hobbit","JRR Tolkein", 815, true)
 myLibrary[2] = new Book("The Hobbit","JRR Tolkein", 815, true)
 
-
+//takes in info from form to create new book
 function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = Book(title, author, pages, hasRead);
     myLibrary.push(newBook);
 }
-
-function displayBooks() {
-    for(let i=0; i < myLibrary.length; ++i) {
+//loops through books and displays
+function displayBooks(library) {
+    let libraryEl = document.getElementById("library-container")
+    for(let i=0; i < library.length; ++i) {
+        
         let newBook = document.createElement("div")
+        newBook.setAttribute("class", "book")
+        newBook.innerHTML = `
+        <p>${myLibrary[i].title}</p>
+        <p>${myLibrary[i].author}</p>
+        <p>${myLibrary[i].pages}</p>
+        <p>${myLibrary[i].hasRead}</p>`
+        libraryEl.append(newBook)
+        
+
         
     }
 }
 
-
+// modal
 const Modal = {
 
     container:document.getElementById("bookEntryModal"),
@@ -40,7 +50,7 @@ const Modal = {
         Modal.button.addEventListener("click", Modal.open);
         Modal.closeBtn.addEventListener("click", Modal.close);
         window.addEventListener("click", Modal.clickOutside);
-        console.log("added events")
+        // console.log("added events")
     },
 
     open: () => {

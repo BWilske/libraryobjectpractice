@@ -36,6 +36,7 @@ input[type="checkbox"] {
 
 
 
+
 .button{
     background-color: coral;
     padding: 1em 2em;
@@ -71,7 +72,7 @@ input[type="checkbox"] {
     flex-direction: column;
     margin: 20% auto;
     padding: 0px 16px 32px 32px;
-    width: 500px;
+    width: 420px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
     animation-name: modalopen;
     animation-duration: .4s;
@@ -131,3 +132,12 @@ input[type="checkbox"] {
     align-items: center;
 }
 
+/* library */
+
+.container {
+    /* background-color: red; */
+}
+
+.container>* {
+    background-color: red;
+}
