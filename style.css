@@ -1,9 +1,10 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Arial, Helvetica, sans-serif ;
     font-size: 16px;
     line-height: 1.5;
-    padding: none;
-    border: none;
+    margin: 0;
+	padding: 0;
+	border: 0;
     background-color: #f3f2ec;
     
 }
@@ -13,10 +14,7 @@ h2 {
     margin: 16px 0px 16px 16px;
 }
 
-p {
-    font-size: 32px;
-    margin: 8px 0px;
-}
+
 
 input[type="text"] {
     font-size: 24px;
@@ -81,6 +79,11 @@ input[type="checkbox"] {
     border-radius: 16px;
 }
 
+.modal-content>p {
+    font-size: 32px;
+    margin: 8px 0px;
+}
+
 #enterBtn {
     width: 172px;
     background-color: rgb(32, 139, 32);
@@ -102,5 +105,29 @@ input[type="checkbox"] {
 @keyframes modalopen {
     from{opacity: 0}
     to {opacity: 1}
+}
+
+/* header */
+.header {
+    display: flex;
+    background-color: rgb(3, 32, 94);
+    /* position: fixed; */
+    border-radius: 0 0 4px 4px;
+    
+    
+}
+
+.header>* {
+    /* border: 5px red solid; */
+    margin: 8px 64px 8px 24px;
+    font-size: 24px;
+    color: coral;
+    font-weight: bold;
+}
+
+.header>:first-child {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
 }
 

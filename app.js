@@ -12,8 +12,9 @@ Book.prototype.logInfo= function () {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.hasRead}`
 }
 
-// let theHobbit = new Book("The Hobbit","JRR Tolkein", 815, true)
-
+myLibrary[0] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[1] = new Book("The Hobbit","JRR Tolkein", 815, true)
+myLibrary[2] = new Book("The Hobbit","JRR Tolkein", 815, true)
 
 
 function addBookToLibrary(title, author, pages, hasRead) {
@@ -21,8 +22,15 @@ function addBookToLibrary(title, author, pages, hasRead) {
     myLibrary.push(newBook);
 }
 
+function displayBooks() {
+    for(let i=0; i < myLibrary.length; ++i) {
+        let newBook = document.createElement("div")
+        
+    }
+}
 
-let Modal = {
+
+const Modal = {
 
     container:document.getElementById("bookEntryModal"),
     button:document.getElementById("modalBtn"),
@@ -54,5 +62,9 @@ let Modal = {
 
     
 
+    
+
 }
+
+
 Modal.addEvent()
