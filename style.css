@@ -147,4 +147,5 @@ input[type="checkbox"] {
     border: 1px dashed;
     text-align: center;
     margin: 8px
+    padding: 24px;
 }
